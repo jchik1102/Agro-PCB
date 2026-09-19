@@ -1,0 +1,6 @@
+Local_Output/
+Diagnostics_*.zip
+*.kicad_prl
+*.lck
+*-backups/
+~*.lck

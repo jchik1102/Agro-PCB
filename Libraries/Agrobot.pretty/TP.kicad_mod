@@ -1,0 +1,1 @@
+(footprint "TP" (version 20240108) (generator "pcbnew") (layer "F.Cu")(property "Reference" "REF**" (at 0 -1.3 0) (layer "F.SilkS") (effects (font (size 0.8 0.8))))(property "Value" "TP" (at 0 1.4 0) (layer "F.Fab") (effects (font (size 0.8 0.8)) hide))(attr smd)(pad "1" smd circle (at 0 0 0) (size 2 2)(layers "F.Cu" "F.Mask")))
