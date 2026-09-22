@@ -15,22 +15,6 @@ Native KiCad schematic and four-layer PCB draft for a regulated 12 V input with 
 
 Ground zones have been defined but are delivered unfilled. Until step 5, ground connections will appear incomplete. The supplied images and PDF are authoring previews, not screenshots or exports from KiCad.
 
-## Optional one-command local reports
-
-Close the editors after saving. In Windows File Explorer, open this project folder, type `powershell` in the address bar, and press Enter. Run:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\Local_Check.ps1
-```
-
-This process-only execution-policy option does not change your permanent PowerShell policy. Read the script first if you wish. It runs your installed KiCad CLI, exports the native schematic PDF, collects ERC/DRC reports, and attempts a native PCB render. It does not install anything, upload anything, or change your design files. You do not need to interpret the reports: send the resulting `Diagnostics_*.zip` back for review. Do not run it against unsaved editor changes.
-
-If CLI auto-discovery fails, supply its path:
-
-```powershell
-.\Local_Check.ps1 -KiCadCli "C:\Program Files\KiCad\9.0\bin\kicad-cli.exe"
-```
-
 ## Requirements and status
 
 | Item | Target / implementation | Evidence status |
@@ -49,12 +33,8 @@ The two LMR33630 converters use separate inductors, feedback networks, and outpu
 
 - `.kicad_pro`, `.kicad_sch`, `.kicad_pcb`: editable native project.
 - `Libraries`: project-local symbols, footprints, simplified 3D models.
-- `Documentation/BOM.md`: component list and procurement caveats.
 - `Documentation/Schematic_Preview.pdf`: immediately viewable schematic preview.
-- `Documentation/DESIGN_NOTES.md`: circuit choices, limitations, sources.
-- `Documentation/AUTHORING_CHECKS.md`: checks performed outside KiCad.
-- `Images`: illustrative top-board and routing previews.
-- `Local_Check.ps1`: native KiCad export/report helper for Windows.
+- `Images`: illustrative top-board preview.
 
 ## Publishing on GitHub
 
